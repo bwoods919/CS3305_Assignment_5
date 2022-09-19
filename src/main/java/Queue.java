@@ -4,7 +4,6 @@
 // Instructor: Dr. Haddad
 // Assignment: 5
 // IDE Name: IntelliJ
-
 public class Queue<E>
 {
     public Node<E> head, tail;
@@ -73,6 +72,10 @@ public class Queue<E>
             System.out.print(temp.data + "   ");
             temp = temp.next;
         }
+    }
+
+    public E front() {
+        return head.data;
     }
 
     //class to create nodes as objects

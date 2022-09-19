@@ -5,9 +5,9 @@
 // Assignment: 5
 // IDE Name: IntelliJ
 
-/**
- * Need to add the front method
- * */
+/*
+Need to add the front method
+*/
 
 import java.util.Scanner;
 
@@ -17,7 +17,7 @@ public class TestQueue {
 
         Scanner input = new Scanner(System.in);
 
-        Queue<Integer> queue = new Queue();
+        Queue<Integer> queue = new Queue<>();
 
         int option, data;
 
@@ -32,7 +32,7 @@ public class TestQueue {
                     data = input.nextInt();
 
                     System.out.println("\nEnqueueing " + data);
-                    System.out.println("Queue content before enqueueing " + data + " is: ");
+                    System.out.print("Queue content before enqueueing " + data + " is: ");
                     queue.printQueue();
                     queue.enqueue(data);
 
@@ -41,21 +41,24 @@ public class TestQueue {
                     System.out.println();
                     break;
                 case 2: // Deque element
-                    System.out.print("Queue content before dequeueing is:");
+                    System.out.print("Queue content before de-queueing is:");
                     queue.printQueue();
 
                     queue.dequeue();
 
-                    System.out.print("\nQueue content before dequeueing is:");
+                    System.out.print("\nQueue content before de-queuing is:");
                     queue.printQueue();
                     System.out.println();
                     break;
                 case 3: // Front Element
+                    System.out.print("The content of the queue are: ");
+                    queue.printQueue();
+                    System.out.println("\nThe first element of the queue is: " + queue.front());
                     break;
                 case 4: // Size of Queue
-                    System.out.println("The Size of the Queue with contents:");
+                    System.out.print("The Size of the Queue with contents: ");
                     queue.printQueue();
-                    System.out.print(" is: " + queue.size());
+                    System.out.print("is: " + queue.size());
                     break;
                 case 5: // is Empty Queue
                     if (queue.isEmpty())
@@ -63,25 +66,24 @@ public class TestQueue {
                     else {
                         System.out.println("\nThe Queue is Not empty.");
 
-                        System.out.println("\nThe content of the queue is: ");
+                        System.out.println("\nThe content of the queue are: ");
                         queue.printQueue();
                         System.out.println();
                     }
                     break;
                 case 6: // Print queue content
-                    System.out.print("\nThe content of the queue is:");
+                    System.out.print("\nThe content of the queue is: ");
                     queue.printQueue();
                     System.out.println();
                     break;
                 case 7: // Exit
-                    System.exit(-1);
+                    System.exit(255);
                     break;
             }
         }
     }
 
     public static void printMenu() {
-
         System.out.println("\n--------MAIN MENU--------");
         System.out.println("1 - Enqueue element");
         System.out.println("2 - Dequeue element");
