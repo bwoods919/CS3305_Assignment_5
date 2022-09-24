@@ -41,24 +41,35 @@ public class TestQueue {
                     System.out.println();
                     break;
                 case 2: // Deque element
-                    System.out.print("Queue content before de-queueing is:");
-                    queue.printQueue();
 
-                    queue.dequeue();
+                    if (queue.isEmpty())
+                        System.out.println("\nThe Queue is empty!");
+                    else {
+                        System.out.print("Queue content before de-queueing is: ");
+                        queue.printQueue();
 
-                    System.out.print("\nQueue content before de-queuing is:");
-                    queue.printQueue();
-                    System.out.println();
+                        queue.dequeue();
+
+                        System.out.print("\nQueue content after de-queuing is: ");
+                        queue.printQueue();
+                        System.out.println();
+                    }
                     break;
                 case 3: // Front Element
-                    System.out.print("The content of the queue are: ");
-                    queue.printQueue();
-                    System.out.println("\nThe first element of the queue is: " + queue.front());
+
+                    if (queue.isEmpty())
+                        System.out.println("\nThe Queue is empty!");
+                    else {
+                        System.out.print("The content of the queue are: ");
+                        queue.printQueue();
+                        System.out.println("\nThe first element of the queue is: " + queue.front());
+                    }
                     break;
                 case 4: // Size of Queue
-                    System.out.print("The Size of the Queue with contents: ");
+                    System.out.print("\nThe Size of the Queue with contents: ");
                     queue.printQueue();
                     System.out.print("is: " + queue.size());
+                    System.out.println();
                     break;
                 case 5: // is Empty Queue
                     if (queue.isEmpty())
@@ -72,9 +83,13 @@ public class TestQueue {
                     }
                     break;
                 case 6: // Print queue content
-                    System.out.print("\nThe content of the queue is: ");
-                    queue.printQueue();
-                    System.out.println();
+                    if (queue.isEmpty())
+                        System.out.println("\nhe Queue is empty!");
+                    else {
+                        System.out.print("\nThe content of the queue is: ");
+                        queue.printQueue();
+                        System.out.println();
+                    }
                     break;
                 case 7: // Exit
                     System.exit(255);

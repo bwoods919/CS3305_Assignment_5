@@ -17,13 +17,13 @@ public class Queue<E>
     }
 
     //method add node to end of list
-    public void enqueue(E data)
+    public void enqueue(E e)
     {
         if (tail == null)
-            head = tail = new Node<E>(data); //empty list
+            head = tail = new Node<E>(e); //empty list
         else
         {
-            tail.next = new Node<E>(data); //link new node as last node
+            tail.next = new Node<E>(e); //link new node as last node
             tail = tail.next; //make tail pointer points to last node
         }
     }
