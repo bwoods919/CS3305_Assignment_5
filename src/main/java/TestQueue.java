@@ -5,10 +5,6 @@
 // Assignment: 5
 // IDE Name: IntelliJ
 
-/*
-Need to add the front method
-*/
-
 import java.util.Scanner;
 
 public class TestQueue {
@@ -21,6 +17,7 @@ public class TestQueue {
 
         int option, data;
 
+        // Sentient Loop
         while(true) {
 
             printMenu();
@@ -98,6 +95,7 @@ public class TestQueue {
         }
     }
 
+    // Method to print the menu
     public static void printMenu() {
         System.out.println("\n--------MAIN MENU--------");
         System.out.println("1 - Enqueue element");
