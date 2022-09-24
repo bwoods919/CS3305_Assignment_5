@@ -98,7 +98,7 @@ class Main {
 
             // Re-Run Logic
             System.out.println("Do you want to run again? (Y/N): ");
-            String exit = input.nextLine();
+            String exit = input.next();
             exit = exit.toLowerCase();
 
             if (exit.equals("N") || exit.equals("n") || exit.equals("No") || exit.equals("no") || exit.equals("NO"))
